@@ -1,0 +1,8 @@
+**Criterios de aceptación – Sugerencia de especialidad según el motivo de consulta**
+
+1. El paciente puede escribir libremente el motivo de su consulta.
+2. El sistema sugiere una especialidad del catálogo (Medicina General, Pediatría, Cardiología o Dermatología).
+3. La sugerencia no incluye diagnósticos ni recomendaciones de medicamentos.
+4. El paciente puede aceptar la sugerencia o elegir otra especialidad manualmente.
+5. Si el sistema no logra clasificar el motivo, sugiere Medicina General.
+6. El sistema no debe responder en más de 3 segundos.

@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+.env
+*.pyc
+.venv/
+plantuml*.jar
+node_modules/

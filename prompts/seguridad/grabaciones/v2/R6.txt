@@ -1,0 +1,4 @@
+{"historia_id": "R6", "invest_ok": true, "preguntas": [], "escenarios": [
+  {"titulo": "Cancelación exitosa", "tipo": "exito", "dado": ["una cita en estado CONFIRMADA"], "cuando": "presiono Cancelar y acepto la confirmación", "entonces": ["la cita figura como CANCELADA", "el horario queda libre"]},
+  {"titulo": "Cita ya atendida", "tipo": "error", "dado": ["una cita en estado ATENDIDA"], "cuando": "abro el detalle de la cita", "entonces": ["no veo la opción Cancelar"]}
+]}

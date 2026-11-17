@@ -1,0 +1,4 @@
+{"historia_id": "H6", "invest_ok": true, "preguntas": [], "escenarios": [
+  {"titulo": "Reprogramación exitosa", "tipo": "exito", "dado": ["que tengo una cita CONFIRMADA con Dr. Mamani", "que hay otro horario libre con la misma especialidad"], "cuando": "elijo el nuevo horario y confirmo", "entonces": ["veo mi cita con el nuevo horario", "el horario anterior queda libre"]},
+  {"titulo": "Sin horarios disponibles", "tipo": "error", "dado": ["que no hay otros horarios libres de la especialidad"], "cuando": "presiono Reprogramar", "entonces": ["veo el mensaje \"No hay horarios disponibles\"", "mi cita original se mantiene"]}
+]}

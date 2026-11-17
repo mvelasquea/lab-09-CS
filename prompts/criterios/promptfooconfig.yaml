@@ -1,0 +1,32 @@
+# Evaluación de la Tarea A (criterios Gherkin). Ejecutar desde la raíz del repo:
+#   PROMPTFOO_DISABLE_TELEMETRY=1 npx promptfoo eval -c prompts/criterios/promptfooconfig.yaml --no-cache -o prompts/criterios/resultados.json
+description: "Tarea A - criterios de aceptación Gherkin (CitaSalud)"
+prompts:
+  - file://v1.txt
+  - file://v2.txt
+  - file://v3.txt
+providers:
+  - id: file://../proveedor_grabado.py       # respuestas grabadas; reemplazable por un modelo real
+    label: asistente-grabado
+    config:
+      carpeta: criterios
+defaultTest:
+  assert:
+    - type: is-json
+      value: file://esquema.json
+      metric: A1_contrato_json
+    - type: javascript                      # A2: si la historia es válida, hay éxito y (error o borde)
+      metric: A2_exito_y_error
+      value: |
+        let r; try { r = JSON.parse(output); } catch (e) { return false; }
+        if (r.invest_ok === false) return true;
+        const t = (r.escenarios || []).map(e => e.tipo);
+        return t.includes('exito') && (t.includes('error') || t.includes('borde'));
+    - type: javascript                      # A3: los ESCENARIOS describen comportamiento, no implementación
+      metric: A3_sin_implementacion
+      value: |
+        const prohibidas = /\b(postgresql|mysql|mongodb|react|django|endpoint|api|base de datos|tabla|sql|json)\b/;
+        let texto = output.toLowerCase();
+        try { texto = JSON.stringify(JSON.parse(output).escenarios || []).toLowerCase(); } catch (e) {}
+        return !prohibidas.test(texto);
+tests: file://casos.yaml

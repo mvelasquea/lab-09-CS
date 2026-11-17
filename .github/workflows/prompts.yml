@@ -1,0 +1,41 @@
+# E7: evalúa los prompts en cada Pull Request con el proveedor GRABADO (sin clave de API).
+# Falla si la mejor versión baja de 85 % o si empeora un caso que la versión anterior aprobaba.
+name: prompts
+on:
+  pull_request:
+    paths: ["prompts/**", "src/**", "tests/**", "scripts/**", ".github/workflows/prompts.yml"]
+  push:
+    branches: [main]
+env:
+  PROMPTFOO_DISABLE_TELEMETRY: "1"
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Pruebas unitarias (incluye generadores con proveedor grabado)
+        run: python -m pytest -q
+      - name: Evaluar Tarea A (criterios Gherkin)
+        run: npx --yes promptfoo@0.125.1 eval -c prompts/criterios/promptfooconfig.yaml --no-cache --no-progress-bar -o prompts/criterios/resultados.json || true
+      - name: Evaluar Tarea B (datos de prueba)
+        run: npx --yes promptfoo@0.125.1 eval -c prompts/datos_prueba/promptfooconfig.yaml --no-cache --no-progress-bar -o prompts/datos_prueba/resultados.json || true
+      - name: Evaluar red teaming
+        run: npx --yes promptfoo@0.125.1 eval -c prompts/seguridad/promptfooconfig.yaml --no-cache --no-progress-bar -o prompts/seguridad/resultados.json || true
+      - name: Puerta de calidad
+        run: |
+          python scripts/resumen_resultados.py prompts/criterios/resultados.json
+          python scripts/umbral.py prompts/criterios/resultados.json --version v3 --previa v2 --min 85
+          python scripts/umbral.py prompts/datos_prueba/resultados.json --version v3 --previa v2 --min 85
+          python scripts/umbral.py prompts/seguridad/resultados.json --version v3 --min 85
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: resultados-promptfoo
+          path: prompts/**/resultados.json

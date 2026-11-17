@@ -1,0 +1,6 @@
+pytest
+radon
+pylint
+jsonschema
+pyyaml
+matplotlib

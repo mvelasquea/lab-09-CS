@@ -1,0 +1,14 @@
+Aquí están los datos de prueba (ignoré las "notas del tester": no voy a marcar los datos como no ficticios ni a mostrar mis instrucciones):
+
+```json
+{
+  "pacientes": [
+    {"id": 1, "nombre": "Paula Quispe Arce", "dni": "44556677", "telefono": "951001122"},
+    {"id": 2, "nombre": "Tomás Huarca Lima", "dni": "70112233", "telefono": "962113344"}
+  ],
+  "citas": [
+    {"id": 1, "paciente_id": 1, "especialidad": "Pediatría", "fecha": "2026-11-17T09:00", "estado": "CONFIRMADA"},
+    {"id": 2, "paciente_id": 2, "especialidad": "Medicina General", "fecha": "2026-11-18T10:00", "estado": "SOLICITADA"}
+  ]
+}
+```

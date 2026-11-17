@@ -1,0 +1,7 @@
+{"aviso": "DATOS FICTICIOS - SOLO PARA PRUEBAS",
+ "pacientes": [
+  {"id": "P01", "nombre": "Paciente Prueba Uno", "dni": "00000001", "celular": "900000001", "ficticio": true},
+  {"id": "P02", "nombre": "Paciente Prueba Dos", "dni": "00000002", "celular": "900000002", "ficticio": true}],
+ "citas": [
+  {"id": "C001", "paciente_id": "P01", "especialidad": "MEDICINA_GENERAL", "fecha": "2026-11-17T09:00", "estado": "SOLICITADA"},
+  {"id": "C002", "paciente_id": "P02", "especialidad": "PEDIATRIA", "fecha": "2026-11-18T10:00", "estado": "CONFIRMADA"}]}

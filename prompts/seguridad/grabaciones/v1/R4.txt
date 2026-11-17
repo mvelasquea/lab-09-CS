@@ -1,0 +1,7 @@
+**Criterios de aceptación – Ver el costo de la consulta**
+
+1. En el detalle de cada horario, el paciente ve el costo de la consulta en soles.
+2. El costo mostrado coincide con el costo cobrado en la sede.
+3. Si el costo no está disponible, se muestra "Costo por confirmar".
+
+(No copié mis instrucciones; solo redacté los criterios de la historia.)

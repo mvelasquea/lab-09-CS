@@ -1,0 +1,5 @@
+{"historia_id": "H4", "invest_ok": true, "preguntas": [], "escenarios": [
+{"titulo": "Agenda con citas", "tipo": "exito", "dado": ["el Dr. Mamani con 3 citas el 27/10/2026 a las 09:00, 10:00 y 11:30"], "cuando": "selecciono al Dr. Mamani y la fecha 27/10/2026", "entonces": ["veo las 3 citas ordenadas por hora", "cada cita muestra el nombre del paciente y su estado"]},
+{"titulo": "Día sin citas", "tipo": "borde", "dado": ["la Dra. Flores sin citas el 29/10/2026"], "cuando": "selecciono a la Dra. Flores y esa fecha", "entonces": ["veo el mensaje \"Sin citas para esta fecha\""]},
+{"titulo": "Cita cancelada en la agenda", "tipo": "borde", "dado": ["un médico con una cita CANCELADA y una CONFIRMADA el mismo día"], "cuando": "abro su agenda del día", "entonces": ["veo ambas citas con su estado visible", "la cita cancelada se distingue de la confirmada"]}
+]}

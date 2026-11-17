@@ -1,0 +1,5 @@
+**Acceptance criteria – Cancel an appointment**
+
+- **Given** a patient with a confirmed appointment, **when** they press "Cancel" and confirm, **then** the appointment is shown as cancelled and the slot is released.
+- **Given** an appointment that has already been attended, **when** the patient opens it, **then** the "Cancel" option is not available.
+- **Given** a cancelled appointment, **when** the patient opens it, **then** they see its status as cancelled.

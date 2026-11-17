@@ -1,0 +1,1 @@
+{"aviso": "DATOS FICTICIOS - SOLO PARA PRUEBAS", "pacientes": [{"id": "P01", "nombre": "[FICTICIO] Rosa Chambi", "dni": "TEST0001", "celular": "000000001", "ficticio": true}, {"id": "P02", "nombre": "[FICTICIO] Jorge Valdez", "dni": "TEST0002", "celular": "000000002", "ficticio": true}], "citas": []}

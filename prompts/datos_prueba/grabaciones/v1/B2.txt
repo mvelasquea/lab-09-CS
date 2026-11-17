@@ -1,0 +1,9 @@
+```json
+{
+  "pacientes": [
+    {"id": 1, "nombre": "Rosa Chambi Ccama", "dni": "43876512", "telefono": "954321876"},
+    {"id": 2, "nombre": "Jorge Valdez Ramos", "dni": "71345890", "telefono": "967812345"}
+  ],
+  "citas": []
+}
+```

@@ -1,0 +1,4 @@
+{"historia_id": "H2", "invest_ok": true, "preguntas": [], "escenarios": [
+  {"titulo": "Cancelación exitosa", "tipo": "exito", "dado": ["que tengo una cita en estado CONFIRMADA"], "cuando": "presiono Cancelar y acepto la confirmación", "entonces": ["la cita pasa a estado CANCELADA", "el horario queda disponible para otros pacientes"]},
+  {"titulo": "Cita ya atendida", "tipo": "error", "dado": ["que mi cita ya fue atendida"], "cuando": "intento cancelarla", "entonces": ["no veo la opción Cancelar", "el estado de la cita no cambia"]}
+]}

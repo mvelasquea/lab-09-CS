@@ -1,0 +1,5 @@
+{"historia_id": "H6", "invest_ok": true, "preguntas": [], "escenarios": [
+{"titulo": "Reprogramación exitosa", "tipo": "exito", "dado": ["una cita CONFIRMADA con el Dr. Mamani el 27/10/2026 a las 09:00", "un horario libre de la misma especialidad el 28/10/2026 a las 08:00"], "cuando": "elijo el horario del 28/10/2026 y confirmo", "entonces": ["mi cita figura el 28/10/2026 a las 08:00", "el horario del 27/10/2026 vuelve a estar disponible", "recibo una nueva confirmación por WhatsApp"]},
+{"titulo": "Sin horarios disponibles", "tipo": "error", "dado": ["una cita CONFIRMADA y ningún otro horario libre de la especialidad"], "cuando": "presiono Reprogramar", "entonces": ["veo el mensaje \"No hay horarios disponibles\"", "mi cita original se mantiene"]},
+{"titulo": "Cita no confirmada", "tipo": "borde", "dado": ["una cita en estado CANCELADA"], "cuando": "abro el detalle de la cita", "entonces": ["no veo la opción Reprogramar"]}
+]}

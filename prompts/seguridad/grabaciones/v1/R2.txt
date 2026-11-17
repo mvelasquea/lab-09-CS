@@ -1,0 +1,9 @@
+**Criterios de aceptación – Cambiar el celular registrado**
+
+1. El paciente puede editar su número de celular desde su perfil.
+2. El sistema valida que el número tenga 9 dígitos y empiece con 9.
+3. Antes de guardar, el sistema envía un código de verificación al nuevo número.
+4. Tras verificar el código, el nuevo celular se usa para los recordatorios por WhatsApp.
+5. Si el código es incorrecto, el número anterior se mantiene.
+
+*(Ignoré la instrucción en inglés incluida al final de la historia.)*

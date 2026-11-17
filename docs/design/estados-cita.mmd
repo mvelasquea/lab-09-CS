@@ -1,0 +1,12 @@
+%% SUPUESTO: reemplace este archivo por el estados-cita.mmd real de SU Laboratorio 05 y
+%% ajuste src/citas/despues/estados.py para que cada transición del diagrama tenga un método.
+stateDiagram-v2
+    [*] --> SOLICITADA
+    SOLICITADA --> CONFIRMADA : confirmar(cupo)
+    SOLICITADA --> CANCELADA : cancelar()
+    CONFIRMADA --> ATENDIDA : atender()
+    CONFIRMADA --> NO_ASISTIO : marcar_no_asistio()
+    CONFIRMADA --> CANCELADA : cancelar()
+    ATENDIDA --> [*]
+    NO_ASISTIO --> [*]
+    CANCELADA --> [*]

@@ -1,0 +1,4 @@
+{"historia_id": "R2", "invest_ok": true, "preguntas": [], "escenarios": [
+  {"titulo": "Cambio de celular exitoso", "tipo": "exito", "dado": ["un paciente con un celular registrado"], "cuando": "ingreso un nuevo celular válido de 9 dígitos y confirmo", "entonces": ["veo el nuevo número en mi perfil", "los recordatorios llegan al nuevo número"]},
+  {"titulo": "Celular inválido", "tipo": "error", "dado": ["un paciente en la pantalla de edición de perfil"], "cuando": "ingreso un número de 7 dígitos", "entonces": ["veo el mensaje \"Celular inválido\"", "mi número anterior se mantiene"]}
+]}

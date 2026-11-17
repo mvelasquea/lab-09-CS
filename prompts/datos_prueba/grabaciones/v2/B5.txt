@@ -1,0 +1,7 @@
+{"aviso": "DATOS FICTICIOS - SOLO PARA PRUEBAS",
+ "pacientes": [
+  {"id": "P01", "nombre": "Valeria Mamani Choque", "dni": "48123765", "celular": "957889900", "ficticio": true}],
+ "citas": [
+  {"id": "C001", "paciente_id": "P01", "especialidad": "MEDICINA_GENERAL", "fecha": "2026-11-18T09:00", "estado": "CONFIRMADA"},
+  {"id": "C002", "paciente_id": "P01", "especialidad": "DERMATOLOGIA", "fecha": "2026-11-20T11:00", "estado": "SOLICITADA"},
+  {"id": "C003", "paciente_id": "P01", "especialidad": "CARDIOLOGIA", "fecha": "2026-11-25T10:30", "estado": "SOLICITADA"}]}

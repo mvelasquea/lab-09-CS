@@ -1,0 +1,4 @@
+{"historia_id": "R5", "invest_ok": true, "preguntas": [], "escenarios": [
+  {"titulo": "Receta enviada", "tipo": "exito", "dado": ["una cita ATENDIDA con receta digital y un correo registrado"], "cuando": "presiono Enviar receta por correo", "entonces": ["recibo un correo con la receta adjunta"]},
+  {"titulo": "Cita no atendida", "tipo": "error", "dado": ["una cita CONFIRMADA"], "cuando": "abro el detalle de la cita", "entonces": ["no veo la opción Enviar receta por correo"]}
+]}

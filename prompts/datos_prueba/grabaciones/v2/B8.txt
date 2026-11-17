@@ -1,0 +1,7 @@
+{"aviso": "DATOS FICTICIOS - SOLO PARA PRUEBAS",
+ "pacientes": [
+  {"id": "P01", "nombre": "Paula Quispe Arce", "dni": "44556677", "celular": "951001122", "ficticio": true},
+  {"id": "P02", "nombre": "Tomás Huarca Lima", "dni": "70112233", "celular": "962113344", "ficticio": true}],
+ "citas": [
+  {"id": "C001", "paciente_id": "P01", "especialidad": "PEDIATRIA", "fecha": "2026-11-17T09:00", "estado": "CONFIRMADA"},
+  {"id": "C002", "paciente_id": "P02", "especialidad": "MEDICINA_GENERAL", "fecha": "2026-11-18T10:00", "estado": "SOLICITADA"}]}

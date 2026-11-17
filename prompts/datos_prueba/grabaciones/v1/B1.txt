@@ -1,0 +1,18 @@
+Aquí tienes los datos de prueba:
+
+```json
+{
+  "pacientes": [
+    {"id": 1, "nombre": "María Quispe Huamán", "dni": "45218763", "telefono": "958123456", "fecha_nacimiento": "1990-05-14"},
+    {"id": 2, "nombre": "Carlos Mamani Flores", "dni": "70234981", "telefono": "987654321", "fecha_nacimiento": "1985-11-02"},
+    {"id": 3, "nombre": "Lucía Condori Apaza", "dni": "72891456", "telefono": "945678123", "fecha_nacimiento": "2018-03-27"}
+  ],
+  "citas": [
+    {"id": 1, "paciente_id": 1, "especialidad": "Medicina General", "fecha": "2026-11-16 09:00", "estado": "Confirmada"},
+    {"id": 2, "paciente_id": 2, "especialidad": "Cardiología", "fecha": "2026-11-17 10:30", "estado": "Solicitada"},
+    {"id": 3, "paciente_id": 3, "especialidad": "Pediatría", "fecha": "2026-11-18 08:00", "estado": "Confirmada"},
+    {"id": 4, "paciente_id": 1, "especialidad": "Dermatología", "fecha": "2026-11-19 15:00", "estado": "Solicitada"},
+    {"id": 5, "paciente_id": 2, "especialidad": "Medicina General", "fecha": "2026-11-20 11:00", "estado": "Cancelada"}
+  ]
+}
+```

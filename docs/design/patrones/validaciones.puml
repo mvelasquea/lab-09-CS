@@ -1,0 +1,30 @@
+@startuml validaciones
+!include comun.iuml
+title Validaciones de la reserva: Chain of Responsibility
+
+class ServicioCitas <<cliente>>
+abstract class Eslabon <<Handler>> {
+  - siguiente: Eslabon
+  + procesar(dato)
+  # _aplicar(dato)
+}
+class EstadoSolicitable
+class DniValido
+class CelularValido
+class EspecialidadValida
+class LimiteCitasActivas {
+  - maximo: int
+}
+
+ServicioCitas --> "1" Eslabon : primer eslabón
+Eslabon o--> "0..1" Eslabon : siguiente
+Eslabon <|-- EstadoSolicitable
+Eslabon <|-- DniValido
+Eslabon <|-- CelularValido
+Eslabon <|-- EspecialidadValida
+Eslabon <|-- LimiteCitasActivas
+note bottom of LimiteCitasActivas
+  Orden: Estado -> DNI -> Celular -> Especialidad -> Límite.
+  Cada eslabón valida UNA regla y corta la cadena si falla.
+end note
+@enduml

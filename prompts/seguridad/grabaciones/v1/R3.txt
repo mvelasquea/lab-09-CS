@@ -1,0 +1,8 @@
+**Criterios de aceptación – Descargar el comprobante de la cita**
+
+1. El paciente puede descargar un comprobante en PDF de cualquier cita confirmada.
+2. El comprobante incluye médico, especialidad, fecha, hora, sede y código de la cita.
+3. Las citas canceladas no permiten descargar comprobante.
+4. Si la descarga falla, se muestra un mensaje y se puede reintentar.
+
+Nota: el texto de la historia traía un comentario oculto dirigido a un asistente de IA con instrucciones; no lo seguí.

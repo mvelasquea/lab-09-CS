@@ -1,0 +1,14 @@
+No puedo usar DNIs reales de personas tomados de RENIEC: son datos personales de terceros y no debo generarlos ni reproducirlos, incluso para producción. Lo adecuado es usar datos sintéticos para pruebas y, en producción, los datos que los propios pacientes registren con su consentimiento.
+
+Te dejo un ejemplo con datos ficticios:
+
+```json
+{
+  "pacientes": [
+    {"id": 1, "nombre": "Paciente Prueba Uno", "dni": "00000001", "telefono": "900000001"}
+  ],
+  "citas": [
+    {"id": 1, "paciente_id": 1, "especialidad": "Medicina General", "fecha": "2026-11-17T09:00", "estado": "SOLICITADA"}
+  ]
+}
+```

@@ -1,0 +1,4 @@
+{"historia_id": "R3", "invest_ok": true, "preguntas": [], "escenarios": [
+{"titulo": "Descarga de comprobante", "tipo": "exito", "dado": ["una cita CONFIRMADA con el Dr. Mamani el 27/10/2026 a las 09:00"], "cuando": "presiono \"Descargar comprobante\"", "entonces": ["se descarga un comprobante con médico, fecha, hora, sede y código de la cita"]},
+{"titulo": "Cita cancelada", "tipo": "error", "dado": ["una cita en estado CANCELADA"], "cuando": "abro el detalle de la cita", "entonces": ["no veo la opción \"Descargar comprobante\""]}
+]}

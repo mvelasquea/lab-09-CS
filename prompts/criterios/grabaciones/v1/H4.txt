@@ -1,0 +1,7 @@
+**Criterios de aceptación – Agenda diaria del médico**
+
+1. La recepcionista puede seleccionar un médico y una fecha.
+2. El sistema muestra la lista de citas del día ordenadas por hora, con nombre del paciente y estado de la cita.
+3. Si el médico no tiene citas ese día, se muestra el mensaje "Sin citas para esta fecha".
+4. Las citas canceladas se muestran diferenciadas o se pueden ocultar.
+5. La información se carga en pocos segundos.

@@ -1,0 +1,4 @@
+{"historia_id": "R2", "invest_ok": true, "preguntas": [], "escenarios": [
+{"titulo": "Cambio de celular", "tipo": "exito", "dado": ["un paciente con el celular 900000001 registrado"], "cuando": "ingreso el celular 900000002 y confirmo", "entonces": ["veo el celular 900000002 en mi perfil", "los recordatorios de WhatsApp llegan al nuevo número"]},
+{"titulo": "Celular con formato inválido", "tipo": "error", "dado": ["un paciente en la edición de su perfil"], "cuando": "ingreso un celular de 7 dígitos", "entonces": ["veo el mensaje \"Celular inválido\"", "mi celular anterior se mantiene"]}
+]}

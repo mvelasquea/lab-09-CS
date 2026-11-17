@@ -1,0 +1,100 @@
+@startuml clases
+!include patrones/comun.iuml
+title CitaSalud Arequipa - Diagrama de clases del módulo Citas (Lab 05 actualizado, Lab 07)
+left to right direction
+
+package "Dominio" {
+  class Cita <<contexto State>>
+  class Cupo
+  class ResultadoReserva
+  abstract class EstadoCita <<State>>
+  class Solicitada
+  class Confirmada
+  class Atendida
+  class NoAsistio
+  class Cancelada
+}
+package "Agendas" {
+  class FabricaAgendas <<Factory>>
+  class Fabrica
+  interface AgendaMedica <<Strategy>>
+  class ClinicaAdapter <<Adapter>>
+  class HospitalAdapter <<Adapter>>
+  class ConReintentos <<Decorator>>
+}
+package "Políticas" {
+  class FabricaPoliticas <<Factory>>
+  interface PoliticaAsignacion <<Strategy>>
+  class MasProximo
+  class MenorCarga
+  class MedicoPreferido
+}
+package "Cadenas" {
+  abstract class Eslabon <<Handler>>
+  class EstadoSolicitable
+  class DniValido
+  class CelularValido
+  class EspecialidadValida
+  class LimiteCitasActivas
+  class LongitudMaxima
+  class SinDiagnostico
+  class SinMedicacion
+  class EspecialidadDelCatalogo
+}
+package "Eventos" {
+  class PublicadorEventos <<Subject>>
+  interface Suscriptor <<Observer>>
+  class NotificadorWhatsApp
+  class ProgramadorRecordatorios
+}
+package "IA" {
+  interface ProveedorLLM <<Strategy>>
+  class ClaudeAdapter <<Adapter>>
+  class LocalAdapter <<Adapter>>
+  class ConCache <<Decorator>>
+  class GeneradorSugerencias
+}
+class ServicioCitas <<cliente>>
+
+EstadoCita <|-- Solicitada
+EstadoCita <|-- Confirmada
+EstadoCita <|-- Atendida
+EstadoCita <|-- NoAsistio
+EstadoCita <|-- Cancelada
+Cita o--> EstadoCita
+Cita --> Cupo
+Fabrica <|-- FabricaAgendas
+Fabrica <|-- FabricaPoliticas
+AgendaMedica <|.. ClinicaAdapter
+AgendaMedica <|.. HospitalAdapter
+AgendaMedica <|.. ConReintentos
+ConReintentos o--> AgendaMedica
+AgendaMedica ..> ResultadoReserva
+PoliticaAsignacion <|.. MasProximo
+PoliticaAsignacion <|.. MenorCarga
+PoliticaAsignacion <|.. MedicoPreferido
+Eslabon <|-- EstadoSolicitable
+Eslabon <|-- DniValido
+Eslabon <|-- CelularValido
+Eslabon <|-- EspecialidadValida
+Eslabon <|-- LimiteCitasActivas
+Eslabon <|-- LongitudMaxima
+Eslabon <|-- SinDiagnostico
+Eslabon <|-- SinMedicacion
+Eslabon <|-- EspecialidadDelCatalogo
+Eslabon o--> Eslabon
+Suscriptor <|.. NotificadorWhatsApp
+Suscriptor <|.. ProgramadorRecordatorios
+PublicadorEventos o--> Suscriptor
+ProveedorLLM <|.. ClaudeAdapter
+ProveedorLLM <|.. LocalAdapter
+ProveedorLLM <|.. ConCache
+ConCache o--> ProveedorLLM
+GeneradorSugerencias --> ProveedorLLM
+GeneradorSugerencias --> Eslabon
+ServicioCitas --> FabricaAgendas
+ServicioCitas --> FabricaPoliticas
+ServicioCitas --> Eslabon
+ServicioCitas --> PublicadorEventos
+ServicioCitas --> GeneradorSugerencias
+@enduml

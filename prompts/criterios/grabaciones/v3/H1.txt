@@ -1,0 +1,6 @@
+{"historia_id": "H1", "invest_ok": true, "preguntas": [], "escenarios": [
+{"titulo": "Reserva exitosa en la clínica", "tipo": "exito", "dado": ["un paciente con 1 cita activa", "un horario libre de Pediatría en la clínica el 27/10/2026 a las 11:00"], "cuando": "elijo Pediatría, la sede Clínica y confirmo ese horario", "entonces": ["veo la cita confirmada con médico, fecha y hora", "recibo la confirmación por WhatsApp"]},
+{"titulo": "Horario tomado por otro paciente", "tipo": "error", "dado": ["un horario que otro paciente confirmó hace un momento"], "cuando": "intento confirmar ese horario", "entonces": ["veo el mensaje \"El horario ya no está disponible\"", "puedo elegir otro horario"]},
+{"titulo": "Límite de citas activas", "tipo": "borde", "dado": ["un paciente que ya tiene 2 citas activas"], "cuando": "intento reservar una tercera cita", "entonces": ["veo el mensaje \"Ya tienes 2 citas activas\"", "la tercera cita no se crea"]},
+{"titulo": "Especialidad sin cupos", "tipo": "borde", "dado": ["Cardiología sin horarios libres en el hospital"], "cuando": "elijo Cardiología y la sede Hospital", "entonces": ["veo el mensaje \"Sin cupos disponibles\""]}
+]}

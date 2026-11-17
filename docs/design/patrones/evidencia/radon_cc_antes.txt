@@ -1,0 +1,11 @@
+antes/servicio.py
+    M 52:4 ServicioCitas.solicitar_cita - E (36)
+    C 44:0 ServicioCitas - C (18)
+    M 133:4 ServicioCitas.sugerir_especialidad - B (9)
+    M 45:4 ServicioCitas.__init__ - A (5)
+    F 39:0 _normalizar - A (3)
+    C 19:0 Cupo - A (1)
+    C 27:0 Cita - A (1)
+
+7 blocks (classes, functions, methods) analyzed.
+Average complexity: C (10.428571428571429)

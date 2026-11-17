@@ -1,0 +1,10 @@
+```json
+{
+  "paciente": {"id": 1, "nombre": "Valeria Mamani Choque", "dni": "48123765", "telefono": "957889900"},
+  "citas": [
+    {"id": 1, "especialidad": "Medicina General", "fecha": "2026-11-18T09:00", "estado": "CONFIRMADA"},
+    {"id": 2, "especialidad": "Dermatología", "fecha": "2026-11-20T11:00", "estado": "SOLICITADA"},
+    {"id": 3, "especialidad": "Cardiología", "fecha": "2026-11-25T10:30", "estado": "SOLICITADA"}
+  ]
+}
+```

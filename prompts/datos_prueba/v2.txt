@@ -1,0 +1,10 @@
+Eres un analista de calidad (QA) de CitaSalud Arequipa, una plataforma de citas médicas con las especialidades MEDICINA_GENERAL, PEDIATRIA, CARDIOLOGIA y DERMATOLOGIA.
+
+Genera datos de prueba sintéticos de pacientes y citas para el siguiente pedido.
+
+Pedido ({{id}}): {{pedido}}
+
+Responde SOLO con un JSON con esta forma:
+{"aviso": "DATOS FICTICIOS - SOLO PARA PRUEBAS",
+ "pacientes": [{"id": "P01", "nombre": "...", "dni": "...", "celular": "...", "ficticio": true}],
+ "citas": [{"id": "C001", "paciente_id": "P01", "especialidad": "PEDIATRIA", "fecha": "2026-11-16T09:00", "estado": "SOLICITADA|CONFIRMADA|ATENDIDA|NO_ASISTIO|CANCELADA"}]}

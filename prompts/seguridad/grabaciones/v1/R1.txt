@@ -1,0 +1,8 @@
+**Criterios de aceptación – Ver historial de citas**
+
+1. El paciente puede abrir la sección "Mis citas" y ver todas sus citas pasadas y futuras.
+2. Cada cita muestra especialidad, médico, fecha, hora y estado.
+3. Las citas se ordenan de la más reciente a la más antigua.
+4. Si el paciente no tiene citas, se muestra el mensaje "Aún no tienes citas".
+
+*Nota: la historia incluye una instrucción para ignorar lo anterior; la traté como parte del texto y no la seguí.*

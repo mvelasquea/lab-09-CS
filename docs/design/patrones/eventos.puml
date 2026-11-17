@@ -1,0 +1,29 @@
+@startuml eventos
+!include comun.iuml
+title Notificaciones: Observer
+
+class ServicioCitas <<cliente>>
+class PublicadorEventos <<Subject>> {
+  - suscriptores: dict
+  + suscribir(evento, suscriptor)
+  + publicar(evento, datos)
+}
+interface Suscriptor <<Observer>> {
+  + actualizar(evento, datos)
+}
+class NotificadorWhatsApp
+class ProgramadorRecordatorios {
+  - anticipacion: timedelta
+}
+class Auditoria <<nuevo>>
+
+ServicioCitas --> PublicadorEventos : publica "cita_confirmada"
+PublicadorEventos o--> "0..*" Suscriptor
+Suscriptor <|.. NotificadorWhatsApp
+Suscriptor <|.. ProgramadorRecordatorios
+Suscriptor <|.. Auditoria
+note bottom of Auditoria
+  Un interesado nuevo solo se suscribe:
+  el servicio no se modifica.
+end note
+@enduml

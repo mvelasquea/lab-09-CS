@@ -1,0 +1,7 @@
+**Criterios de aceptación – Reservar cita eligiendo especialidad y sede**
+
+1. El paciente puede elegir una especialidad (Medicina General, Pediatría, Cardiología o Dermatología) y una sede (clínica u hospital).
+2. El sistema muestra únicamente los horarios con cupo disponible para la especialidad y sede elegidas.
+3. Al seleccionar un horario y confirmar, el sistema registra la cita y muestra un mensaje de confirmación con médico, fecha y hora.
+4. Si el horario ya fue tomado por otro paciente, el sistema informa al usuario y le permite elegir otro.
+5. El paciente recibe la confirmación de la cita por WhatsApp.

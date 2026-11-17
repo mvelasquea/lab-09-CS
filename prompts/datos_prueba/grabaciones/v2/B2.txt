@@ -1,0 +1,5 @@
+{"aviso": "DATOS FICTICIOS - SOLO PARA PRUEBAS",
+ "pacientes": [
+  {"id": "P01", "nombre": "Rosa Chambi Ccama", "dni": "43876512", "celular": "954321876", "ficticio": true},
+  {"id": "P02", "nombre": "Jorge Valdez Ramos", "dni": "71345890", "celular": "967812345", "ficticio": true}],
+ "citas": []}

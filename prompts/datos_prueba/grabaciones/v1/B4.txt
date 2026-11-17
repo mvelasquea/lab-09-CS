@@ -1,0 +1,21 @@
+```json
+{
+  "pacientes": [
+    {"id": 1, "nombre": "Sofía Rivera Núñez", "dni": "45671230", "telefono": "955112233"},
+    {"id": 2, "nombre": "Miguel Ángel Cáceres", "dni": "47890123", "telefono": "966223344"},
+    {"id": 3, "nombre": "Daniela Puma Layme", "dni": "71234509", "telefono": "977334455"},
+    {"id": 4, "nombre": "Raúl Anccori Pari", "dni": "40987654", "telefono": "988445566"},
+    {"id": 5, "nombre": "Camila Yucra Soncco", "dni": "73456781", "telefono": "999556677"}
+  ],
+  "citas": [
+    {"id": 1, "paciente_id": 1, "especialidad": "Medicina General", "fecha": "2026-11-16T09:00", "estado": "CONFIRMADA"},
+    {"id": 2, "paciente_id": 2, "especialidad": "Cardiología", "fecha": "2026-11-16T11:30", "estado": "SOLICITADA"},
+    {"id": 3, "paciente_id": 3, "especialidad": "Pediatría", "fecha": "2026-11-17T08:30", "estado": "CONFIRMADA"},
+    {"id": 4, "paciente_id": 4, "especialidad": "Dermatología", "fecha": "2026-11-18T15:00", "estado": "CONFIRMADA"},
+    {"id": 5, "paciente_id": 5, "especialidad": "Medicina General", "fecha": "2026-11-18T16:30", "estado": "SOLICITADA"},
+    {"id": 6, "paciente_id": 1, "especialidad": "Cardiología", "fecha": "2026-11-19T10:00", "estado": "CONFIRMADA"},
+    {"id": 7, "paciente_id": 3, "especialidad": "Pediatría", "fecha": "2026-11-20T09:15", "estado": "SOLICITADA"},
+    {"id": 8, "paciente_id": 2, "especialidad": "Dermatología", "fecha": "2026-11-20T14:00", "estado": "CANCELADA"}
+  ]
+}
+```

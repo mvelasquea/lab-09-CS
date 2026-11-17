@@ -1,0 +1,1 @@
+{"historia_id": "H7", "invest_ok": false, "preguntas": ["¿En qué tiempo máximo debe responder cada pantalla para considerarla rápida, y en qué tipo de conexión?", "¿Qué tareas concretas debe completar un paciente sin ayuda para considerar la aplicación fácil de usar?"], "escenarios": []}

@@ -1,0 +1,7 @@
+**Criterios de aceptación – Aplicación rápida y fácil de usar**
+
+1. Las pantallas principales cargan en menos de 3 segundos con una conexión 4G estándar.
+2. Un paciente nuevo puede reservar una cita en menos de 5 minutos sin ayuda.
+3. La interfaz usa textos claros y botones de tamaño adecuado para uso en celular.
+4. El 90 % de los pacientes en una prueba de usabilidad califica la experiencia con 4 o más sobre 5.
+5. La aplicación es compatible con los navegadores y dispositivos móviles más usados.

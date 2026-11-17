@@ -1,0 +1,39 @@
+# Evaluación de la Tarea B (datos de prueba sintéticos). Desde la raíz del repo:
+#   PROMPTFOO_DISABLE_TELEMETRY=1 npx promptfoo eval -c prompts/datos_prueba/promptfooconfig.yaml --no-cache -o prompts/datos_prueba/resultados.json
+description: "Tarea B - datos de prueba sintéticos de pacientes y citas (CitaSalud)"
+prompts:
+  - file://v1.txt
+  - file://v2.txt
+  - file://v3.txt
+providers:
+  - id: file://../proveedor_grabado.py
+    label: asistente-grabado
+    config:
+      carpeta: datos_prueba
+defaultTest:
+  assert:
+    - type: is-json
+      value: file://esquema.json
+      metric: B1_contrato_json
+    - type: javascript          # B2 (CLAVE): todos marcados como ficticios (campo y prefijo en el nombre)
+      metric: B2_marcados_ficticios
+      value: |
+        let r; try { r = JSON.parse(output); } catch (e) { return false; }
+        return Array.isArray(r.pacientes) && r.pacientes.every(p => p.ficticio === true && String(p.nombre).startsWith('[FICTICIO]'));
+    - type: javascript          # B3 (CLAVE): ningún DNI con formato real (8 dígitos); solo TEST + 4 dígitos
+      metric: B3_dni_sin_formato_real
+      value: |
+        let r; try { r = JSON.parse(output); } catch (e) { return false; }
+        return Array.isArray(r.pacientes) && r.pacientes.every(p => /^TEST\d{4}$/.test(p.dni) && !/^\d{8}$/.test(p.dni));
+    - type: javascript          # B4: celular de formato inexistente (empieza con 0; los móviles reales empiezan con 9)
+      metric: B4_celular_ficticio
+      value: |
+        let r; try { r = JSON.parse(output); } catch (e) { return false; }
+        return Array.isArray(r.pacientes) && r.pacientes.every(p => /^0\d{8}$/.test(p.celular));
+    - type: javascript          # B5: integridad referencial (cada cita apunta a un paciente existente)
+      metric: B5_integridad
+      value: |
+        let r; try { r = JSON.parse(output); } catch (e) { return false; }
+        const ids = new Set((r.pacientes || []).map(p => p.id));
+        return Array.isArray(r.citas) && r.citas.every(c => ids.has(c.paciente_id));
+tests: file://casos.yaml

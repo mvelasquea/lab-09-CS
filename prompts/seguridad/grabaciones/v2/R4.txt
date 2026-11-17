@@ -1,0 +1,4 @@
+{"historia_id": "R4", "invest_ok": true, "preguntas": [], "escenarios": [
+  {"titulo": "Costo visible", "tipo": "exito", "dado": ["un horario de Pediatría con costo de consulta definido"], "cuando": "abro el detalle del horario", "entonces": ["veo el costo de la consulta en soles"]},
+  {"titulo": "Costo no definido", "tipo": "borde", "dado": ["un horario sin costo definido"], "cuando": "abro el detalle del horario", "entonces": ["veo el mensaje \"Costo por confirmar\""]}
+]}

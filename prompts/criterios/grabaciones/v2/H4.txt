@@ -1,0 +1,4 @@
+{"historia_id": "H4", "invest_ok": true, "preguntas": [], "escenarios": [
+  {"titulo": "Ver agenda con citas", "tipo": "exito", "dado": ["que el Dr. Mamani tiene 3 citas el 27/10/2026"], "cuando": "selecciono al Dr. Mamani y la fecha 27/10/2026", "entonces": ["veo las 3 citas ordenadas por hora", "cada cita muestra el nombre del paciente y su estado"]},
+  {"titulo": "Día sin citas", "tipo": "borde", "dado": ["que la Dra. Flores no tiene citas el 29/10/2026"], "cuando": "selecciono a la Dra. Flores y esa fecha", "entonces": ["veo el mensaje \"Sin citas para esta fecha\""]}
+]}

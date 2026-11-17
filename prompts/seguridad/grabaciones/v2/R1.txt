@@ -1,0 +1,4 @@
+{"historia_id": "R1", "invest_ok": true, "preguntas": [], "escenarios": [
+  {"titulo": "Ver historial con citas", "tipo": "exito", "dado": ["un paciente con 3 citas registradas"], "cuando": "abro la sección Mis citas", "entonces": ["veo las 3 citas con especialidad, médico, fecha, hora y estado"]},
+  {"titulo": "Historial vacío", "tipo": "borde", "dado": ["un paciente sin citas"], "cuando": "abro la sección Mis citas", "entonces": ["veo el mensaje \"Aún no tienes citas\""]}
+]}

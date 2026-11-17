@@ -1,0 +1,11 @@
+{"aviso": "DATOS FICTICIOS - SOLO PARA PRUEBAS",
+ "pacientes": [
+  {"id": "P01", "nombre": "María Quispe Huamán", "dni": "45218763", "celular": "958123456", "ficticio": true},
+  {"id": "P02", "nombre": "Carlos Mamani Flores", "dni": "70234981", "celular": "987654321", "ficticio": true},
+  {"id": "P03", "nombre": "Lucía Condori Apaza", "dni": "72891456", "celular": "945678123", "ficticio": true}],
+ "citas": [
+  {"id": "C001", "paciente_id": "P01", "especialidad": "MEDICINA_GENERAL", "fecha": "2026-11-16T09:00", "estado": "CONFIRMADA"},
+  {"id": "C002", "paciente_id": "P02", "especialidad": "CARDIOLOGIA", "fecha": "2026-11-17T10:30", "estado": "SOLICITADA"},
+  {"id": "C003", "paciente_id": "P03", "especialidad": "PEDIATRIA", "fecha": "2026-11-18T08:00", "estado": "CONFIRMADA"},
+  {"id": "C004", "paciente_id": "P01", "especialidad": "DERMATOLOGIA", "fecha": "2026-11-19T15:00", "estado": "SOLICITADA"},
+  {"id": "C005", "paciente_id": "P02", "especialidad": "MEDICINA_GENERAL", "fecha": "2026-11-20T11:00", "estado": "CANCELADA"}]}

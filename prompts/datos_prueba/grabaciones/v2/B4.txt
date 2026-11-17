@@ -1,0 +1,16 @@
+{"aviso": "DATOS FICTICIOS - SOLO PARA PRUEBAS",
+ "pacientes": [
+  {"id": "P01", "nombre": "Sofía Rivera Núñez", "dni": "45671230", "celular": "955112233", "ficticio": true},
+  {"id": "P02", "nombre": "Miguel Cáceres Luna", "dni": "47890123", "celular": "966223344", "ficticio": true},
+  {"id": "P03", "nombre": "Daniela Puma Layme", "dni": "71234509", "celular": "977334455", "ficticio": true},
+  {"id": "P04", "nombre": "Raúl Anccori Pari", "dni": "40987654", "celular": "988445566", "ficticio": true},
+  {"id": "P05", "nombre": "Camila Yucra Soncco", "dni": "73456781", "celular": "999556677", "ficticio": true}],
+ "citas": [
+  {"id": "C001", "paciente_id": "P01", "especialidad": "MEDICINA_GENERAL", "fecha": "2026-11-16T09:00", "estado": "CONFIRMADA"},
+  {"id": "C002", "paciente_id": "P02", "especialidad": "CARDIOLOGIA", "fecha": "2026-11-16T11:30", "estado": "SOLICITADA"},
+  {"id": "C003", "paciente_id": "P03", "especialidad": "PEDIATRIA", "fecha": "2026-11-17T08:30", "estado": "CONFIRMADA"},
+  {"id": "C004", "paciente_id": "P04", "especialidad": "DERMATOLOGIA", "fecha": "2026-11-18T15:00", "estado": "CONFIRMADA"},
+  {"id": "C005", "paciente_id": "P05", "especialidad": "MEDICINA_GENERAL", "fecha": "2026-11-18T16:30", "estado": "SOLICITADA"},
+  {"id": "C006", "paciente_id": "P01", "especialidad": "CARDIOLOGIA", "fecha": "2026-11-19T10:00", "estado": "CONFIRMADA"},
+  {"id": "C007", "paciente_id": "P03", "especialidad": "PEDIATRIA", "fecha": "2026-11-20T09:15", "estado": "SOLICITADA"},
+  {"id": "C008", "paciente_id": "P02", "especialidad": "DERMATOLOGIA", "fecha": "2026-11-20T14:00", "estado": "CANCELADA"}]}

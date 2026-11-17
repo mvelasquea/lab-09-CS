@@ -1,0 +1,28 @@
+antes/__init__.py
+    SLOC: 0
+antes/servicio.py
+    SLOC: 137
+despues/eventos.py
+    SLOC: 26
+despues/ia.py
+    SLOC: 63
+despues/fabrica.py
+    SLOC: 10
+despues/__init__.py
+    SLOC: 0
+despues/validaciones.py
+    SLOC: 31
+despues/cadena.py
+    SLOC: 9
+despues/catalogo.py
+    SLOC: 1
+despues/estados.py
+    SLOC: 39
+despues/servicio.py
+    SLOC: 71
+despues/agendas.py
+    SLOC: 55
+despues/politicas.py
+    SLOC: 22
+** Total **
+    SLOC: 464

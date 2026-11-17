@@ -1,0 +1,5 @@
+{"historia_id": "H3", "invest_ok": true, "preguntas": [], "escenarios": [
+  {"titulo": "Recordatorio enviado", "tipo": "exito", "dado": ["que tengo una cita confirmada para mañana a las 09:00", "que mi celular está registrado"], "cuando": "faltan 24 horas para la cita", "entonces": ["recibo un mensaje de WhatsApp con médico, fecha, hora y sede"]},
+  {"titulo": "Cita cancelada", "tipo": "error", "dado": ["que cancelé mi cita"], "cuando": "llega la hora del recordatorio", "entonces": ["no recibo ningún mensaje"]},
+  {"titulo": "Reserva con poca anticipación", "tipo": "borde", "dado": ["que reservo una cita para dentro de 5 horas"], "cuando": "confirmo la reserva", "entonces": ["recibo solo el mensaje de confirmación", "no recibo recordatorio de 24 horas"]}
+]}

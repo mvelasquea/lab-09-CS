@@ -1,0 +1,19 @@
+# Reto opcional B: integración continua. Falla si una prueba falla o si algún método de
+# la versión con patrones supera complejidad 10 (radon cc --min C).
+name: ci
+on: [push, pull_request]
+jobs:
+  pruebas-y-complejidad:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python -m pytest -q
+      - name: Complejidad ciclomática (falla si hay métodos C o peores en despues/)
+        run: |
+          salida="$(radon cc --min C src/citas/despues)"
+          echo "$salida"
+          test -z "$salida"

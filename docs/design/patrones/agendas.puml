@@ -1,0 +1,46 @@
+@startuml agendas
+!include comun.iuml
+title Agendas médicas: Adapter + Decorator + Factory Method
+
+class ServicioCitas <<cliente>>
+class FabricaAgendas <<Factory>> {
+  + registrar(sede, creador)
+  + crear(sede): AgendaMedica
+}
+interface AgendaMedica <<Strategy>> {
+  + cupos_disponibles(especialidad): list
+  + reservar(cupo, dni): ResultadoReserva
+}
+class ClinicaAdapter <<Adapter>>
+class HospitalAdapter <<Adapter>>
+class ConReintentos <<Decorator>> {
+  - interna: AgendaMedica
+  - intentos: int
+}
+class AgendaClinicaSDK <<externo>> {
+  + listar_horarios(especialidad): list[dict]
+  + bloquear_horario(id, dni): dict
+}
+class AgendaHospitalClient <<externo>> {
+  + consultar_turnos(codigo): list[tuple]
+  + reservar_turno(id, doc): tuple
+}
+
+ServicioCitas --> FabricaAgendas : pide la sede
+ServicioCitas ..> AgendaMedica : usa
+FabricaAgendas ..> AgendaMedica : crea
+AgendaMedica <|.. ClinicaAdapter
+AgendaMedica <|.. HospitalAdapter
+AgendaMedica <|.. ConReintentos
+ConReintentos o--> "1" AgendaMedica : envuelve
+ClinicaAdapter --> AgendaClinicaSDK : traduce
+HospitalAdapter --> AgendaHospitalClient : traduce
+note bottom of ConReintentos
+  Reintenta SOLO ante TimeoutError.
+  Un rechazo (horario ocupado) no se reintenta.
+end note
+note right of HospitalAdapter
+  dd/mm/aaaa -> datetime, código numérico,
+  (HTTP, id) -> ResultadoReserva.
+end note
+@enduml

@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Datos de prueba sintéticos de CitaSalud (pacientes y citas)",
+  "type": "object",
+  "required": ["aviso", "pacientes", "citas"],
+  "additionalProperties": false,
+  "properties": {
+    "aviso": {"const": "DATOS FICTICIOS - SOLO PARA PRUEBAS"},
+    "pacientes": {
+      "type": "array", "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": ["id", "nombre", "dni", "celular", "ficticio"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^P\\d{2}$"},
+          "nombre": {"type": "string", "minLength": 5},
+          "dni": {"type": "string"},
+          "celular": {"type": "string"},
+          "ficticio": {"const": true}
+        }
+      }
+    },
+    "citas": {
+      "type": "array", "maxItems": 30,
+      "items": {
+        "type": "object",
+        "required": ["id", "paciente_id", "especialidad", "fecha", "estado"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^C\\d{3}$"},
+          "paciente_id": {"type": "string", "pattern": "^P\\d{2}$"},
+          "especialidad": {"enum": ["MEDICINA_GENERAL", "PEDIATRIA", "CARDIOLOGIA", "DERMATOLOGIA"]},
+          "fecha": {"type": "string", "pattern": "^2026-\\d{2}-\\d{2}T\\d{2}:\\d{2}$"},
+          "estado": {"enum": ["SOLICITADA", "CONFIRMADA", "ATENDIDA", "NO_ASISTIO", "CANCELADA"]}
+        }
+      }
+    }
+  }
+}

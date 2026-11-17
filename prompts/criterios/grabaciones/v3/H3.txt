@@ -1,0 +1,5 @@
+{"historia_id": "H3", "invest_ok": true, "preguntas": [], "escenarios": [
+{"titulo": "Recordatorio 24 horas antes", "tipo": "exito", "dado": ["una cita CONFIRMADA el 27/10/2026 a las 09:00", "un celular registrado del paciente"], "cuando": "llega el 26/10/2026 a las 09:00", "entonces": ["recibo un WhatsApp con médico, fecha, hora y sede de la cita"]},
+{"titulo": "Cita cancelada antes del recordatorio", "tipo": "error", "dado": ["una cita que el paciente canceló el 25/10/2026"], "cuando": "llega la hora del recordatorio", "entonces": ["no recibo ningún recordatorio de esa cita"]},
+{"titulo": "Reserva con menos de 24 horas", "tipo": "borde", "dado": ["un paciente que reserva una cita para dentro de 5 horas"], "cuando": "confirma la reserva", "entonces": ["recibo el aviso de confirmación", "no recibo un recordatorio adicional de 24 horas"]}
+]}

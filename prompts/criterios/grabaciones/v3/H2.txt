@@ -1,0 +1,5 @@
+{"historia_id": "H2", "invest_ok": true, "preguntas": [], "escenarios": [
+{"titulo": "Cancelación de una cita confirmada", "tipo": "exito", "dado": ["una cita en estado CONFIRMADA con la Dra. Quispe el 27/10/2026 a las 10:00"], "cuando": "presiono Cancelar y acepto el aviso de confirmación", "entonces": ["la cita figura como CANCELADA", "el horario de las 10:00 vuelve a aparecer disponible para otros pacientes"]},
+{"titulo": "Cita ya atendida", "tipo": "error", "dado": ["una cita en estado ATENDIDA"], "cuando": "abro el detalle de la cita", "entonces": ["no veo la opción Cancelar", "el estado de la cita no cambia"]},
+{"titulo": "Cita ya cancelada", "tipo": "borde", "dado": ["una cita en estado CANCELADA"], "cuando": "abro el detalle de la cita", "entonces": ["no veo la opción Cancelar"]}
+]}

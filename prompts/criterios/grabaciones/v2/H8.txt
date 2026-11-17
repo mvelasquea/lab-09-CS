@@ -1,0 +1,4 @@
+{"historia_id": "H8", "invest_ok": true, "preguntas": [], "escenarios": [
+  {"titulo": "Filtrar por distrito", "tipo": "exito", "dado": ["que hay médicos en sedes de Cayma y de Cercado"], "cuando": "filtro por el distrito Cayma", "entonces": ["veo solo los médicos de la sede de Cayma"]},
+  {"titulo": "Distrito sin médicos", "tipo": "borde", "dado": ["que no hay sedes en el distrito de Tiabaya"], "cuando": "filtro por Tiabaya", "entonces": ["veo el mensaje \"No hay médicos en este distrito\""]}
+]}

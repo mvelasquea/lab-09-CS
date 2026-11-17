@@ -1,0 +1,38 @@
+@startuml estados
+!include comun.iuml
+title Ciclo de vida de la cita: State
+
+class Cita <<contexto>> {
+  - _estado: EstadoCita
+  + estado: str
+  + confirmar(cupo, codigo)
+  + atender()
+  + marcar_no_asistio()
+  + cancelar()
+  ~ cambiar_a(nuevo)
+}
+abstract class EstadoCita <<State>> {
+  + verificar_solicitable(cita)
+  + confirmar(cita, cupo, codigo)
+  + atender(cita)
+  + marcar_no_asistio(cita)
+  + cancelar(cita)
+}
+class Solicitada
+class Confirmada
+class Atendida
+class NoAsistio
+class Cancelada
+Cita o--> "1" EstadoCita : estado actual
+EstadoCita <|-- Solicitada
+EstadoCita <|-- Confirmada
+EstadoCita <|-- Atendida
+EstadoCita <|-- NoAsistio
+EstadoCita <|-- Cancelada
+note right of EstadoCita
+  Por defecto toda transición lanza ValueError.
+  Cada estado redefine SOLO las permitidas:
+  Solicitada -> Confirmada | Cancelada
+  Confirmada -> Atendida | NoAsistio | Cancelada
+end note
+@enduml

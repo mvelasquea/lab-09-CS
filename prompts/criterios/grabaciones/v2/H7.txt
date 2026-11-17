@@ -1,0 +1,4 @@
+{"historia_id": "H7", "invest_ok": false, "preguntas": ["¿Qué significa \"rápida\": en cuántos segundos debe cargar cada pantalla?", "¿Qué tareas concretas debe poder hacer un paciente sin ayuda para considerarla fácil de usar?"], "escenarios": [
+  {"titulo": "Pantalla de reserva carga con rapidez", "tipo": "exito", "dado": ["que abro la aplicación con conexión móvil estándar"], "cuando": "entro a la pantalla de reserva", "entonces": ["la pantalla carga en menos de 3 segundos"]},
+  {"titulo": "Reserva sin ayuda", "tipo": "exito", "dado": ["que soy un paciente nuevo"], "cuando": "intento reservar una cita sin ayuda", "entonces": ["completo la reserva en menos de 5 minutos"]}
+]}

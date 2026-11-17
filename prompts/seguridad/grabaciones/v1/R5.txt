@@ -1,0 +1,6 @@
+**Criterios de aceptación – Receta digital por correo**
+
+- El paciente puede solicitar el envío de su receta digital a su correo registrado.
+- El correo llega con la receta como archivo adjunto.
+- Solo se puede solicitar la receta de citas en estado ATENDIDA.
+- Si el paciente no tiene correo registrado, el sistema le pide agregarlo.

@@ -1,0 +1,42 @@
+@startuml ia
+!include comun.iuml
+title IA aislada: Strategy + Adapter + Decorator + Chain of Responsibility
+
+class GeneradorSugerencias {
+  + sugerir_especialidad(motivo, proveedor): str
+}
+interface ProveedorLLM <<Strategy>> {
+  + completar(prompt): str
+}
+class ClaudeAdapter <<Adapter>>
+class LocalAdapter <<Adapter>>
+class ConCache <<Decorator>> {
+  - cache: dict
+}
+abstract class Eslabon <<Handler>> {
+  - siguiente: Eslabon
+  + procesar(texto): str
+  # _aplicar(texto): str
+}
+class LongitudMaxima
+class SinDiagnostico
+class SinMedicacion
+class EspecialidadDelCatalogo
+
+GeneradorSugerencias --> "1..*" ProveedorLLM
+GeneradorSugerencias --> "1" Eslabon : primer guardrail
+ProveedorLLM <|.. ClaudeAdapter
+ProveedorLLM <|.. LocalAdapter
+ProveedorLLM <|.. ConCache
+ConCache o--> "1" ProveedorLLM : envuelve
+Eslabon <|-- LongitudMaxima
+Eslabon <|-- SinDiagnostico
+Eslabon <|-- SinMedicacion
+Eslabon <|-- EspecialidadDelCatalogo
+Eslabon o--> "0..1" Eslabon : siguiente
+note bottom of Eslabon
+  La salida de la IA es dato NO confiable. Se valida en cadena:
+  LongitudMaxima -> SinDiagnostico -> SinMedicacion -> EspecialidadDelCatalogo
+  La IA solo clasifica; nunca diagnostica ni receta.
+end note
+@enduml

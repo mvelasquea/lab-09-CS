@@ -1,0 +1,32 @@
+@startuml politicas
+!include comun.iuml
+title Asignación de cupos: Strategy + Factory Method (registro)
+
+class ServicioCitas <<cliente>> {
+  + solicitar_cita(cita, sede, politica): str
+}
+class FabricaPoliticas <<Factory>> {
+  + registrar(nombre, creador)
+  + crear(nombre): PoliticaAsignacion
+}
+interface PoliticaAsignacion <<Strategy>> {
+  + elegir(cupos, cita): Cupo
+}
+class MasProximo
+class MenorCarga
+class MedicoPreferido {
+  - respaldo: PoliticaAsignacion
+}
+
+ServicioCitas --> FabricaPoliticas : pide la estrategia
+ServicioCitas ..> PoliticaAsignacion : usa
+FabricaPoliticas ..> PoliticaAsignacion : crea
+PoliticaAsignacion <|.. MasProximo
+PoliticaAsignacion <|.. MenorCarga
+PoliticaAsignacion <|.. MedicoPreferido
+MedicoPreferido o--> "1" PoliticaAsignacion : respaldo
+note right of FabricaPoliticas
+  Nueva política = registrar un creador
+  (abierto/cerrado). El servicio no cambia.
+end note
+@enduml

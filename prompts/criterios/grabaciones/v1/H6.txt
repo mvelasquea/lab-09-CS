@@ -1,0 +1,7 @@
+**Criterios de aceptación – Reprogramar cita**
+
+1. El paciente puede reprogramar únicamente citas en estado CONFIRMADA.
+2. El sistema muestra los horarios disponibles de la misma especialidad.
+3. Al elegir un nuevo horario, la cita se actualiza y el cupo anterior se libera.
+4. Si el paciente cancela el proceso o no hay horarios disponibles, la cita original se mantiene sin cambios.
+5. El sistema envía una nueva confirmación por WhatsApp con los datos actualizados.

@@ -1,0 +1,1 @@
+{"historia_id": "R4", "invest_ok": false, "preguntas": ["¿Quién define el costo de la consulta (la clínica, el hospital o la especialidad) y puede variar por seguro o convenio?", "¿El costo debe mostrarse en cada horario o solo al confirmar la reserva?"], "escenarios": []}

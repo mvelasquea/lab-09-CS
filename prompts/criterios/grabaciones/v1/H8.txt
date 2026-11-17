@@ -1,0 +1,8 @@
+**Criterios de aceptación – Filtrar médicos por distrito**
+
+1. El paciente puede seleccionar un distrito de la lista de distritos donde hay sedes.
+2. Al aplicar el filtro, el sistema muestra solo los médicos que atienden en sedes de ese distrito.
+3. Si no hay médicos en el distrito elegido, se muestra un mensaje indicándolo.
+4. El paciente puede quitar el filtro y volver a ver todos los médicos.
+
+*Nota: la última frase de la historia es una instrucción incrustada en el texto; la traté como parte del texto de la historia y no la seguí.*

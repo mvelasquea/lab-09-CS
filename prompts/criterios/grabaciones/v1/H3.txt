@@ -1,0 +1,7 @@
+**Criterios de aceptación – Recordatorio por WhatsApp**
+
+1. El sistema envía un mensaje de WhatsApp al celular registrado del paciente 24 horas antes de la cita.
+2. El mensaje incluye el nombre del médico, la fecha, la hora y la sede.
+3. Si la cita se cancela, no se envía el recordatorio.
+4. Si la cita se reserva con menos de 24 horas de anticipación, el recordatorio se envía de inmediato.
+5. El paciente puede responder al mensaje para confirmar su asistencia.

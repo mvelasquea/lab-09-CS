@@ -1,0 +1,48 @@
+```json
+{
+  "pacientes": [
+    {"id": 1, "nombre": "Ana Pari", "dni": "41234567", "telefono": "953217531"},
+    {"id": 2, "nombre": "Luis Cutipa", "dni": "42469134", "telefono": "956435062"},
+    {"id": 3, "nombre": "Rosa Huanca", "dni": "43703701", "telefono": "959652593"},
+    {"id": 4, "nombre": "Jorge Apaza", "dni": "44938268", "telefono": "962870124"},
+    {"id": 5, "nombre": "Elena Chávez", "dni": "46172835", "telefono": "966087655"},
+    {"id": 6, "nombre": "Pedro Soncco", "dni": "47407402", "telefono": "969305186"},
+    {"id": 7, "nombre": "Marta Layme", "dni": "48641969", "telefono": "972522717"},
+    {"id": 8, "nombre": "Iván Condori", "dni": "49876536", "telefono": "975740248"},
+    {"id": 9, "nombre": "Lucía Mamani", "dni": "41111104", "telefono": "978957779"},
+    {"id": 10, "nombre": "Raúl Ccama", "dni": "42345671", "telefono": "982175310"},
+    {"id": 11, "nombre": "Sara Flores", "dni": "43580238", "telefono": "985392841"},
+    {"id": 12, "nombre": "Tito Quispe", "dni": "44814805", "telefono": "988610372"},
+    {"id": 13, "nombre": "Nora Vilca", "dni": "46049372", "telefono": "991827903"},
+    {"id": 14, "nombre": "Óscar Puma", "dni": "47283939", "telefono": "995045434"},
+    {"id": 15, "nombre": "Gina Ramos", "dni": "48518506", "telefono": "998262965"},
+    {"id": 16, "nombre": "Hugo Salas", "dni": "49753073", "telefono": "951480497"},
+    {"id": 17, "nombre": "Inés Torres", "dni": "40987641", "telefono": "954698028"},
+    {"id": 18, "nombre": "Dante Rojas", "dni": "42222208", "telefono": "957915559"},
+    {"id": 19, "nombre": "Fabiola Núñez", "dni": "43456775", "telefono": "961133090"},
+    {"id": 20, "nombre": "Walter Yucra", "dni": "44691342", "telefono": "964350621"}
+  ],
+  "citas": [
+    {"id": 1, "paciente_id": 1, "especialidad": "Pediatría", "fecha": "2026-11-17T09:00", "estado": "SOLICITADA"},
+    {"id": 2, "paciente_id": 2, "especialidad": "Cardiología", "fecha": "2026-11-18T10:00", "estado": "SOLICITADA"},
+    {"id": 3, "paciente_id": 3, "especialidad": "Dermatología", "fecha": "2026-11-19T11:00", "estado": "SOLICITADA"},
+    {"id": 4, "paciente_id": 4, "especialidad": "Medicina General", "fecha": "2026-11-20T12:00", "estado": "SOLICITADA"},
+    {"id": 5, "paciente_id": 5, "especialidad": "Pediatría", "fecha": "2026-11-21T13:00", "estado": "SOLICITADA"},
+    {"id": 6, "paciente_id": 6, "especialidad": "Cardiología", "fecha": "2026-11-22T14:00", "estado": "SOLICITADA"},
+    {"id": 7, "paciente_id": 7, "especialidad": "Dermatología", "fecha": "2026-11-23T15:00", "estado": "SOLICITADA"},
+    {"id": 8, "paciente_id": 8, "especialidad": "Medicina General", "fecha": "2026-11-24T08:00", "estado": "SOLICITADA"},
+    {"id": 9, "paciente_id": 9, "especialidad": "Pediatría", "fecha": "2026-11-25T09:00", "estado": "SOLICITADA"},
+    {"id": 10, "paciente_id": 10, "especialidad": "Cardiología", "fecha": "2026-11-16T10:00", "estado": "SOLICITADA"},
+    {"id": 11, "paciente_id": 11, "especialidad": "Dermatología", "fecha": "2026-11-17T11:00", "estado": "SOLICITADA"},
+    {"id": 12, "paciente_id": 12, "especialidad": "Medicina General", "fecha": "2026-11-18T12:00", "estado": "SOLICITADA"},
+    {"id": 13, "paciente_id": 13, "especialidad": "Pediatría", "fecha": "2026-11-19T13:00", "estado": "SOLICITADA"},
+    {"id": 14, "paciente_id": 14, "especialidad": "Cardiología", "fecha": "2026-11-20T14:00", "estado": "SOLICITADA"},
+    {"id": 15, "paciente_id": 15, "especialidad": "Dermatología", "fecha": "2026-11-21T15:00", "estado": "SOLICITADA"},
+    {"id": 16, "paciente_id": 16, "especialidad": "Medicina General", "fecha": "2026-11-22T08:00", "estado": "SOLICITADA"},
+    {"id": 17, "paciente_id": 17, "especialidad": "Pediatría", "fecha": "2026-11-23T09:00", "estado": "SOLICITADA"},
+    {"id": 18, "paciente_id": 18, "especialidad": "Cardiología", "fecha": "2026-11-24T10:00", "estado": "SOLICITADA"},
+    {"id": 19, "paciente_id": 19, "especialidad": "Dermatología", "fecha": "2026-11-25T11:00", "estado": "SOLICITADA"},
+    {"id": 20, "paciente_id": 20, "especialidad": "Medicina General", "fecha": "2026-11-16T12:00", "estado": "SOLICITADA"}
+  ]
+}
+```

@@ -1,0 +1,5 @@
+{"historia_id": "H5", "invest_ok": true, "preguntas": [], "escenarios": [
+  {"titulo": "Sugerencia de especialidad", "tipo": "exito", "dado": ["que escribo el motivo \"mi hijo tiene fiebre desde ayer\""], "cuando": "presiono Sugerir especialidad", "entonces": ["veo la sugerencia \"Pediatría\"", "puedo aceptarla o elegir otra especialidad"]},
+  {"titulo": "Motivo no reconocido", "tipo": "borde", "dado": ["que escribo un motivo que no corresponde a ninguna especialidad"], "cuando": "presiono Sugerir especialidad", "entonces": ["veo la sugerencia \"Medicina General\""]},
+  {"titulo": "Sin diagnóstico", "tipo": "error", "dado": ["que escribo el motivo \"me duele el pecho\""], "cuando": "presiono Sugerir especialidad", "entonces": ["veo solo el nombre de una especialidad", "no veo ningún diagnóstico ni medicamento"]}
+]}
